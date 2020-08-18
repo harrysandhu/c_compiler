@@ -1,4 +1,4 @@
-# C Compiler in Haskell
+# C Compiler
 
 compiler written in Haskell
 
@@ -18,18 +18,23 @@ compiler written in Haskell
 * Tokens -> AST (Abstract syntax tree)
 * Root of AST will be the entire program and each node will have children representing its constituent parts.
 
-** Example:
+#### Example:
+
+``````````````````
    if (a < b){
        c = 2;
        return c;
     } else {
       c = 3;
     }
+``````````````````
 
- -- the condition (a < b)
- -- the if body (c = 2; return c;)
- -- the else body ( c = 3)
+* the condition (a < b)
+* the if body (c = 2; return c;)
+* the else body ( c = 3)
 
- *** Furhter breakdown
- 
+##### Further Breakdown
+* Condition - binary operation with two children (a, b)
+* Assignment (c = 2) has two children, (c, 2)
+<img src="https://norasandler.com/assets/AST.svg">
  
